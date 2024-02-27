@@ -66,6 +66,7 @@ document.getElementById("min0").textContent = calculaTempo(tempos[0])[2];
 document.getElementById("seg0").textContent = calculaTempo(tempos[0])[3];
 
 function atualizaCronometro(){
+    
 } for (let i=0; i<contadores.length;i++){
     document.getElementById("dias"+i).textContent = calculaTempo(tempos[i])[0];
     document.getElementById("horas"+i).textContent = calculaTempo(tempos[i])[1];
