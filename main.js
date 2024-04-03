@@ -2,15 +2,15 @@ const botoes = document.querySelectorAll(".botao");
 const textos = document.querySelectorAll(".aba-conteudo");
 
 for (let i = 0; i < botoes.length; i++) {
-    botoes[i].onclick = function () {
+    botoes[i].onclick = function () { // cria uma função
 
-        for (let j = 0; j < botoes.length; j++) {
-            botoes[j].classList.remove("ativo");
-            textos[j].classList.remove("ativo");
+        for (let j = 0; j < botoes.length; j++) { //loop que executa enquanto j<quantidade de bot
+            botoes[j].classList.remove("ativo"); //remove a palavra ativo da classe botoes
+            textos[j].classList.remove("ativo"); //remove a palavra ativo da classe textos
         }
 
-        botoes[i].classList.add("ativo");
-        textos[i].classList.add("ativo");
+        botoes[i].classList.add("ativo"); // adiciona a palavra ativo da classe botoes
+        textos[i].classList.add("ativo"); // adiciona a palavra ativo da classe textos
     }
 }
 
@@ -42,7 +42,7 @@ function calculaTempo(tempoObjetivo) {
 }
 
 function atualizaCronometro(){
-    for (let i=0; i<contadores.length;i++){
+    for (let i=0; i<contadores.length;i++){ //loop que executa enquanto i<quantidade de bot
         document.getElementById("dias"+i).textContent = calculaTempo(tempos[i])[0];
         document.getElementById("horas"+i).textContent = calculaTempo(tempos[i])[1];
         document.getElementById("min"+i).textContent = calculaTempo(tempos[i])[2];
